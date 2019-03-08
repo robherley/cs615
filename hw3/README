@@ -1,0 +1,29 @@
+- installing traceroute and tcpdump with yum
+- not knowing how omnios to use snoop (read man page)
+  - already had snoop and traceroute installed
+  - snoop has an option to listen to packets on /dev/audio 
+  - turns out snoop has pratically the same expression syntax as tcpdump
+  - use -o to write to file, -i to read
+  - use -r to prevent IP address to symbolic name
+- traceroute on fedora was significantly faster than omnios (and macos)
+- fedora's default traceroute packet size was 60 bytes, omnios was 40 bytes
+- had no clue what in-addr.arpa was, but after a quick google, i discovered
+it for IPv4 reverse dns lookup, and the address is prepended in reverse, from 
+least significant octet to most significant
+
+traceroute
+==========
+fedora$ sudo tcpdump -w traceroute.dump 'icmp or udp' >&/dev/null &
+fedora$ traceroute www.stevens.edu > trace.txt
+fedora$ fg 
+^C
+fedora$ sudo tcpdump -n -r traceroute.dump
+
+snoop
+=====
+omni$ snoop -r -o traceroute.snoop 'udp or icmp' >&/dev/null &
+omni$ traceroute www.stevens.edu > trace.txt
+omni$ fg
+^C
+omni$ sudo snoop -i traceroute.snoop
+

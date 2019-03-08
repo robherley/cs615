@@ -1,0 +1,151 @@
+fedora - tcpdump
+================
+
+- DNS Query for www.stevens.edu (Destination is 155.246.21.100)
+05:46:02.990267 IP 172.31.25.24.34476 > 172.31.0.2.domain: 46242+ A? stevens.edu. (29)
+05:46:02.990279 IP 172.31.25.24.34476 > 172.31.0.2.domain: 25294+ AAAA? stevens.edu. (29)
+05:46:03.000948 IP 172.31.0.2.domain > 172.31.25.24.34476: 46242 1/0/0 A 155.246.21.100 (45)
+05:46:03.070900 IP 172.31.0.2.domain > 172.31.25.24.34476: 25294 0/1/0 (100)
+
+- Sending Traceroute Packets to Destination Host (155.246.21.100)
+05:46:03.071141 IP 172.31.25.24.43675 > 155.246.21.100.traceroute: UDP, length 32
+(15 Additional Packets Following)
+
+- 6th Hop Response, and the UDP to the Destination Host
+05:46:03.071883 IP 100.65.12.33 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+05:46:03.071940 IP 172.31.25.24.54952 > 155.246.21.100.33450: UDP, length 32
+
+- 6th Hop Again
+05:46:03.072294 IP 100.65.12.49 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 6th Hop Again
+05:46:03.073429 IP 100.65.12.65 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 7th Hop
+05:46:03.073934 IP 52.93.28.129 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 7th Hop Again
+05:46:03.074431 IP 52.93.28.93 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 7th Hop Again
+05:46:03.075537 IP 52.93.28.133 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 2nd Hop
+05:46:03.082703 IP 100.66.8.106 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 3rd Hop
+05:46:03.082995 IP 100.66.10.234 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 2nd Hop Again
+05:46:03.083610 IP 100.66.8.244 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 5th Hop
+05:46:03.084717 IP 100.66.5.131 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 3rd Hop Again
+05:46:03.086700 IP 100.66.14.38 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 1st Hop
+05:46:03.087152 IP 216.182.226.110 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+
+- 4th Hop
+05:46:03.087216 IP 100.66.7.157 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed x2)
+
+- 2nd Hop Again
+05:46:03.087401 IP 100.66.8.228 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 1st Hop Again
+05:46:03.088388 IP 216.182.226.106 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 4th Hop 
+05:46:03.088771 IP 100.66.6.239 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 9th Hop
+05:46:03.090487 IP 100.91.129.21 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 9th Hop Again
+05:46:03.090779 IP 100.91.129.19 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 4th Hop Again
+05:46:03.091232 IP 100.66.6.135 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 5th Hop Again
+05:46:03.092269 IP 100.66.5.129 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+
+- 5th Hop Again
+05:46:03.092275 IP 100.66.5.149 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed x2)
+
+- 9th Hop Again
+05:46:03.092703 IP 100.91.129.103 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 3rd Hop Again
+05:46:03.092767 IP 100.66.10.170 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+(UDP to Destination Followed)
+
+- 1st Hop Again
+05:46:03.093003 IP 216.182.226.6 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+
+- DNS Pointer - Reverse Lookup of 1st Hop
+05:46:03.093122 IP 172.31.25.24.51229 > 172.31.0.2.domain: 26467+ PTR? 6.226.182.216.in-addr.arpa. (44)
+
+- 11th Hop
+05:46:03.094713 IP 52.93.1.90 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+
+- 11th Hop Again
+05:46:03.095209 IP 52.93.1.86 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+
+- 11th Hop Again
+05:46:03.097373 IP 52.93.1.76 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+
+- DNS Non-Existent Domain for 1st Hop
+05:46:03.097564 IP 172.31.0.2.domain > 172.31.25.24.51229: 26467 NXDomain 0/1/0 (115)
+
+- 12th Hop (Exact IP x2)
+05:46:03.097764 IP 198.32.160.76 > 172.31.25.24: ICMP time exceeded in-transit, length 76
+
+- DNS Pointer - Reverse Lookup of 1st Hop (Again)
+05:46:03.098906 IP 172.31.25.24.35016 > 172.31.0.2.domain: 49882+ PTR? 106.226.182.216.in-addr.arpa. (46)
+
+- 13th Hop
+05:46:03.099159 IP 130.156.251.106 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+
+- 12th Hop Again
+05:46:03.099425 IP 198.32.160.76 > 172.31.25.24: ICMP time exceeded in-transit, length 76
+
+- 10th Hop
+05:46:03.099454 IP 52.93.1.27 > 172.31.25.24: ICMP time exceeded in-transit, length 148
+
+- 13th Hop Again (Exact IP x2)
+05:46:03.099485 IP 130.156.251.106 > 172.31.25.24: ICMP time exceeded in-transit, length 36
+
+- DNS Non-Existent Domain for 1st Hop (Again)
+05:46:03.100694 IP 172.31.0.2.domain > 172.31.25.24.35016: 49882 NXDomain 0/1/0 (117)
+
+- DNS Pointer - Reverse Lookup of 1st Hop (Again)
+05:46:03.100902 IP 172.31.25.24.42375 > 172.31.0.2.domain: 61743+ PTR? 110.226.182.216.in-addr.arpa. (46)
+
+- 10th Hop (Again)
+05:46:03.101754 IP 52.93.1.13 > 172.31.25.24: ICMP time exceeded in-transit, length 148
+
+- 10th Hop (Again)
+05:46:03.102773 IP 52.93.1.51 > 172.31.25.24: ICMP time exceeded in-transit, length 148
+
