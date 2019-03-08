@@ -15,7 +15,7 @@ least significant octet to most significant
 - after looking through the lines of tcpdump, I decided to make a crude
 node.js script that will read through the lines and get the output 
 that I wanted
-
+- traceroute on omnios chose 104.16.126.51, whereas fedora chose 155.246.21.100
 
 # TODO - ask slack
 - DNS showing up in snoop?
