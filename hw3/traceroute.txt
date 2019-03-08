@@ -381,3 +381,7 @@ fedora - tcpdump
 - DNS Pointer - Reverse Lookup of 16th Hop (and Resolution)
 05:46:03.246858 IP 172.31.25.24.33678 > 172.31.0.2.domain: 44089+ PTR? 100.21.246.155.in-addr.arpa. (45) 
 05:46:03.330618 IP 172.31.0.2.domain > 172.31.25.24.33678: 44089 2/0/0 PTR stevens.edu., PTR redirect.stevens.edu. (93) 
+
+
+omnios - snoop
+==============

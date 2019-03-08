@@ -1,131 +1,131 @@
-  1   0.00000 172.31.20.72 -> one.one.one.one DNS C www.stevens.edu. Internet Addr ?
-  2   0.01224 one.one.one.one -> 172.31.20.72 DNS R www.stevens.edu. Internet CNAME www.stevens.edu.cdn.cloudflare.net.
+  1   0.00000 172.31.20.72 -> 1.1.1.1      DNS C www.stevens.edu. Internet Addr ?
+  2   0.01224      1.1.1.1 -> 172.31.20.72 DNS R www.stevens.edu. Internet CNAME www.stevens.edu.cdn.cloudflare.net.
   3   0.00058 172.31.20.72 -> 104.16.126.51 UDP D=33434 S=33900 LEN=20
   4   0.01257 216.182.226.122 -> 172.31.20.72 ICMP Time exceeded (in transit)
-  5   0.00020 172.31.20.72 -> one.one.one.one DNS C 122.226.182.216.in-addr.arpa. Internet PTR ?
-  6   0.08596 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-  7   0.00032 172.31.20.72 -> one.one.one.one DNS C 122.226.182.216.in-addr.arpa. Internet PTR ?
-  8   0.00252 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+  5   0.00020 172.31.20.72 -> 1.1.1.1      DNS C 122.226.182.216.in-addr.arpa. Internet PTR ?
+  6   0.08596      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+  7   0.00032 172.31.20.72 -> 1.1.1.1      DNS C 122.226.182.216.in-addr.arpa. Internet PTR ?
+  8   0.00252      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
   9   0.00013 172.31.20.72 -> 104.16.126.51 UDP D=33435 S=33900 LEN=20
  10   0.02243 216.182.224.102 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 11   0.00018 172.31.20.72 -> one.one.one.one DNS C 102.224.182.216.in-addr.arpa. Internet PTR ?
- 12   0.00187 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 13   0.00016 172.31.20.72 -> one.one.one.one DNS C 102.224.182.216.in-addr.arpa. Internet PTR ?
- 14   0.00271 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 11   0.00018 172.31.20.72 -> 1.1.1.1      DNS C 102.224.182.216.in-addr.arpa. Internet PTR ?
+ 12   0.00187      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 13   0.00016 172.31.20.72 -> 1.1.1.1      DNS C 102.224.182.216.in-addr.arpa. Internet PTR ?
+ 14   0.00271      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  15   0.00009 172.31.20.72 -> 104.16.126.51 UDP D=33436 S=33900 LEN=20
  16   0.02040 216.182.226.96 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 17   0.00016 172.31.20.72 -> one.one.one.one DNS C 96.226.182.216.in-addr.arpa. Internet PTR ?
- 18   0.00323 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 19   0.00015 172.31.20.72 -> one.one.one.one DNS C 96.226.182.216.in-addr.arpa. Internet PTR ?
- 20   0.00257 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 17   0.00016 172.31.20.72 -> 1.1.1.1      DNS C 96.226.182.216.in-addr.arpa. Internet PTR ?
+ 18   0.00323      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 19   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 96.226.182.216.in-addr.arpa. Internet PTR ?
+ 20   0.00257      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  21   0.00011 172.31.20.72 -> 104.16.126.51 UDP D=33437 S=33900 LEN=20
  22   0.01482 100.66.8.152 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 23   0.00016 172.31.20.72 -> one.one.one.one DNS C 152.8.66.100.in-addr.arpa. Internet PTR ?
- 24   0.00157 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 25   0.00016 172.31.20.72 -> one.one.one.one DNS C 152.8.66.100.in-addr.arpa. Internet PTR ?
- 26   0.00112 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 23   0.00016 172.31.20.72 -> 1.1.1.1      DNS C 152.8.66.100.in-addr.arpa. Internet PTR ?
+ 24   0.00157      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 25   0.00016 172.31.20.72 -> 1.1.1.1      DNS C 152.8.66.100.in-addr.arpa. Internet PTR ?
+ 26   0.00112      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  27   0.00009 172.31.20.72 -> 104.16.126.51 UDP D=33438 S=33900 LEN=20
  28   0.02207 100.66.9.136 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 29   0.00015 172.31.20.72 -> one.one.one.one DNS C 136.9.66.100.in-addr.arpa. Internet PTR ?
- 30   0.00142 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 31   0.00015 172.31.20.72 -> one.one.one.one DNS C 136.9.66.100.in-addr.arpa. Internet PTR ?
- 32   0.00096 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 29   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 136.9.66.100.in-addr.arpa. Internet PTR ?
+ 30   0.00142      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 31   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 136.9.66.100.in-addr.arpa. Internet PTR ?
+ 32   0.00096      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  33   0.00008 172.31.20.72 -> 104.16.126.51 UDP D=33439 S=33900 LEN=20
  34   0.01337  100.66.8.22 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 35   0.00013 172.31.20.72 -> one.one.one.one DNS C 22.8.66.100.in-addr.arpa. Internet PTR ?
- 36   0.00096 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 37   0.00018 172.31.20.72 -> one.one.one.one DNS C 22.8.66.100.in-addr.arpa. Internet PTR ?
- 38   0.00095 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 35   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 22.8.66.100.in-addr.arpa. Internet PTR ?
+ 36   0.00096      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 37   0.00018 172.31.20.72 -> 1.1.1.1      DNS C 22.8.66.100.in-addr.arpa. Internet PTR ?
+ 38   0.00095      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  39   0.00009 172.31.20.72 -> 104.16.126.51 UDP D=33440 S=33900 LEN=20
  40   0.02470 100.66.14.20 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 41   0.00023 172.31.20.72 -> one.one.one.one DNS C 20.14.66.100.in-addr.arpa. Internet PTR ?
- 42   0.00094 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 43   0.00015 172.31.20.72 -> one.one.one.one DNS C 20.14.66.100.in-addr.arpa. Internet PTR ?
- 44   0.00123 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 41   0.00023 172.31.20.72 -> 1.1.1.1      DNS C 20.14.66.100.in-addr.arpa. Internet PTR ?
+ 42   0.00094      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 43   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 20.14.66.100.in-addr.arpa. Internet PTR ?
+ 44   0.00123      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  45   0.00009 172.31.20.72 -> 104.16.126.51 UDP D=33441 S=33900 LEN=20
  46   0.01316 100.66.14.102 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 47   0.00014 172.31.20.72 -> one.one.one.one DNS C 102.14.66.100.in-addr.arpa. Internet PTR ?
- 48   0.00139 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 49   0.00015 172.31.20.72 -> one.one.one.one DNS C 102.14.66.100.in-addr.arpa. Internet PTR ?
- 50   0.00149 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 47   0.00014 172.31.20.72 -> 1.1.1.1      DNS C 102.14.66.100.in-addr.arpa. Internet PTR ?
+ 48   0.00139      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 49   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 102.14.66.100.in-addr.arpa. Internet PTR ?
+ 50   0.00149      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  51   0.00008 172.31.20.72 -> 104.16.126.51 UDP D=33442 S=33900 LEN=20
  52   0.01196 100.66.10.162 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 53   0.00017 172.31.20.72 -> one.one.one.one DNS C 162.10.66.100.in-addr.arpa. Internet PTR ?
- 54   0.00134 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 55   0.00015 172.31.20.72 -> one.one.one.one DNS C 162.10.66.100.in-addr.arpa. Internet PTR ?
- 56   0.00135 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 53   0.00017 172.31.20.72 -> 1.1.1.1      DNS C 162.10.66.100.in-addr.arpa. Internet PTR ?
+ 54   0.00134      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 55   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 162.10.66.100.in-addr.arpa. Internet PTR ?
+ 56   0.00135      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  57   0.00010 172.31.20.72 -> 104.16.126.51 UDP D=33443 S=33900 LEN=20
  58   0.01327 100.66.6.175 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 59   0.00013 172.31.20.72 -> one.one.one.one DNS C 175.6.66.100.in-addr.arpa. Internet PTR ?
- 60   0.00100 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 61   0.00015 172.31.20.72 -> one.one.one.one DNS C 175.6.66.100.in-addr.arpa. Internet PTR ?
- 62   0.00125 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 59   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 175.6.66.100.in-addr.arpa. Internet PTR ?
+ 60   0.00100      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 61   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 175.6.66.100.in-addr.arpa. Internet PTR ?
+ 62   0.00125      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  63   0.00007 172.31.20.72 -> 104.16.126.51 UDP D=33444 S=33900 LEN=20
  64   0.01809 100.66.7.149 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 65   0.00017 172.31.20.72 -> one.one.one.one DNS C 149.7.66.100.in-addr.arpa. Internet PTR ?
- 66   0.00203 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 67   0.00015 172.31.20.72 -> one.one.one.one DNS C 149.7.66.100.in-addr.arpa. Internet PTR ?
- 68   0.00185 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 65   0.00017 172.31.20.72 -> 1.1.1.1      DNS C 149.7.66.100.in-addr.arpa. Internet PTR ?
+ 66   0.00203      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 67   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 149.7.66.100.in-addr.arpa. Internet PTR ?
+ 68   0.00185      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  69   0.00008 172.31.20.72 -> 104.16.126.51 UDP D=33445 S=33900 LEN=20
  70   0.01767 100.66.7.137 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 71   0.00013 172.31.20.72 -> one.one.one.one DNS C 137.7.66.100.in-addr.arpa. Internet PTR ?
- 72   0.00132 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 73   0.00015 172.31.20.72 -> one.one.one.one DNS C 137.7.66.100.in-addr.arpa. Internet PTR ?
- 74   0.00123 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 71   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 137.7.66.100.in-addr.arpa. Internet PTR ?
+ 72   0.00132      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 73   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 137.7.66.100.in-addr.arpa. Internet PTR ?
+ 74   0.00123      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  75   0.00009 172.31.20.72 -> 104.16.126.51 UDP D=33446 S=33900 LEN=20
  76   0.02174 100.66.5.135 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 77   0.00014 172.31.20.72 -> one.one.one.one DNS C 135.5.66.100.in-addr.arpa. Internet PTR ?
- 78   0.00144 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 79   0.00015 172.31.20.72 -> one.one.one.one DNS C 135.5.66.100.in-addr.arpa. Internet PTR ?
- 80   0.00099 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 77   0.00014 172.31.20.72 -> 1.1.1.1      DNS C 135.5.66.100.in-addr.arpa. Internet PTR ?
+ 78   0.00144      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 79   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 135.5.66.100.in-addr.arpa. Internet PTR ?
+ 80   0.00099      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  81   0.00009 172.31.20.72 -> 104.16.126.51 UDP D=33447 S=33900 LEN=20
  82   0.01922 100.66.5.141 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 83   0.00014 172.31.20.72 -> one.one.one.one DNS C 141.5.66.100.in-addr.arpa. Internet PTR ?
- 84   0.00106 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 85   0.00015 172.31.20.72 -> one.one.one.one DNS C 141.5.66.100.in-addr.arpa. Internet PTR ?
- 86   0.00129 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 83   0.00014 172.31.20.72 -> 1.1.1.1      DNS C 141.5.66.100.in-addr.arpa. Internet PTR ?
+ 84   0.00106      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 85   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 141.5.66.100.in-addr.arpa. Internet PTR ?
+ 86   0.00129      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  87   0.00008 172.31.20.72 -> 104.16.126.51 UDP D=33448 S=33900 LEN=20
  88   0.01234  100.66.5.99 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 89   0.00013 172.31.20.72 -> one.one.one.one DNS C 99.5.66.100.in-addr.arpa. Internet PTR ?
- 90   0.00136 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 91   0.00015 172.31.20.72 -> one.one.one.one DNS C 99.5.66.100.in-addr.arpa. Internet PTR ?
- 92   0.00166 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 89   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 99.5.66.100.in-addr.arpa. Internet PTR ?
+ 90   0.00136      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 91   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 99.5.66.100.in-addr.arpa. Internet PTR ?
+ 92   0.00166      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  93   0.00012 172.31.20.72 -> 104.16.126.51 UDP D=33449 S=33900 LEN=20
  94   0.00067 100.65.14.161 -> 172.31.20.72 ICMP Time exceeded (in transit)
- 95   0.00013 172.31.20.72 -> one.one.one.one DNS C 161.14.65.100.in-addr.arpa. Internet PTR ?
- 96   0.00192 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
- 97   0.00015 172.31.20.72 -> one.one.one.one DNS C 161.14.65.100.in-addr.arpa. Internet PTR ?
- 98   0.00127 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 95   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 161.14.65.100.in-addr.arpa. Internet PTR ?
+ 96   0.00192      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+ 97   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 161.14.65.100.in-addr.arpa. Internet PTR ?
+ 98   0.00127      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
  99   0.00008 172.31.20.72 -> 104.16.126.51 UDP D=33450 S=33900 LEN=20
 100   0.00033 100.65.15.209 -> 172.31.20.72 ICMP Time exceeded (in transit)
-101   0.00013 172.31.20.72 -> one.one.one.one DNS C 209.15.65.100.in-addr.arpa. Internet PTR ?
-102   0.00160 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-103   0.00015 172.31.20.72 -> one.one.one.one DNS C 209.15.65.100.in-addr.arpa. Internet PTR ?
-104   0.00126 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+101   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 209.15.65.100.in-addr.arpa. Internet PTR ?
+102   0.00160      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+103   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 209.15.65.100.in-addr.arpa. Internet PTR ?
+104   0.00126      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 105   0.00007 172.31.20.72 -> 104.16.126.51 UDP D=33451 S=33900 LEN=20
 106   0.00037 100.65.12.177 -> 172.31.20.72 ICMP Time exceeded (in transit)
-107   0.00013 172.31.20.72 -> one.one.one.one DNS C 177.12.65.100.in-addr.arpa. Internet PTR ?
-108   0.00100 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-109   0.00015 172.31.20.72 -> one.one.one.one DNS C 177.12.65.100.in-addr.arpa. Internet PTR ?
-110   0.00258 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+107   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 177.12.65.100.in-addr.arpa. Internet PTR ?
+108   0.00100      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+109   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 177.12.65.100.in-addr.arpa. Internet PTR ?
+110   0.00258      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 111   0.00009 172.31.20.72 -> 104.16.126.51 UDP D=33452 S=33900 LEN=20
 112   0.00719  52.93.28.91 -> 172.31.20.72 ICMP Time exceeded (in transit)
-113   0.00013 172.31.20.72 -> one.one.one.one DNS C 91.28.93.52.in-addr.arpa. Internet PTR ?
-114   0.00608 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-115   0.00016 172.31.20.72 -> one.one.one.one DNS C 91.28.93.52.in-addr.arpa. Internet PTR ?
-116   0.00273 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+113   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 91.28.93.52.in-addr.arpa. Internet PTR ?
+114   0.00608      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+115   0.00016 172.31.20.72 -> 1.1.1.1      DNS C 91.28.93.52.in-addr.arpa. Internet PTR ?
+116   0.00273      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 117   0.00008 172.31.20.72 -> 104.16.126.51 UDP D=33453 S=33900 LEN=20
 118   0.00044 52.93.28.129 -> 172.31.20.72 ICMP Time exceeded (in transit)
-119   0.00013 172.31.20.72 -> one.one.one.one DNS C 129.28.93.52.in-addr.arpa. Internet PTR ?
-120   0.00268 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-121   0.00015 172.31.20.72 -> one.one.one.one DNS C 129.28.93.52.in-addr.arpa. Internet PTR ?
-122   0.00483 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+119   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 129.28.93.52.in-addr.arpa. Internet PTR ?
+120   0.00268      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+121   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 129.28.93.52.in-addr.arpa. Internet PTR ?
+122   0.00483      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 123   0.00007 172.31.20.72 -> 104.16.126.51 UDP D=33454 S=33900 LEN=20
 124   0.00040 52.93.28.109 -> 172.31.20.72 ICMP Time exceeded (in transit)
-125   0.00013 172.31.20.72 -> one.one.one.one DNS C 109.28.93.52.in-addr.arpa. Internet PTR ?
-126   0.00443 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-127   0.00017 172.31.20.72 -> one.one.one.one DNS C 109.28.93.52.in-addr.arpa. Internet PTR ?
-128   0.00445 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+125   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 109.28.93.52.in-addr.arpa. Internet PTR ?
+126   0.00443      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+127   0.00017 172.31.20.72 -> 1.1.1.1      DNS C 109.28.93.52.in-addr.arpa. Internet PTR ?
+128   0.00445      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 129   0.00009 172.31.20.72 -> 104.16.126.51 UDP D=33455 S=33900 LEN=20
 130   5.00017 172.31.20.72 -> 104.16.126.51 UDP D=33456 S=33900 LEN=20
 131   5.00014 172.31.20.72 -> 104.16.126.51 UDP D=33457 S=33900 LEN=20
@@ -135,101 +135,101 @@
 135   5.00018 172.31.20.72 -> 104.16.126.51 UDP D=33461 S=33900 LEN=20
 136   5.00014 172.31.20.72 -> 104.16.126.51 UDP D=33462 S=33900 LEN=20
 137   0.02138 52.93.114.122 -> 172.31.20.72 ICMP Time exceeded (in transit)
-138   0.00029 172.31.20.72 -> one.one.one.one DNS C 122.114.93.52.in-addr.arpa. Internet PTR ?
-139   0.00493 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-140   0.00018 172.31.20.72 -> one.one.one.one DNS C 122.114.93.52.in-addr.arpa. Internet PTR ?
-141   0.00442 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+138   0.00029 172.31.20.72 -> 1.1.1.1      DNS C 122.114.93.52.in-addr.arpa. Internet PTR ?
+139   0.00493      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+140   0.00018 172.31.20.72 -> 1.1.1.1      DNS C 122.114.93.52.in-addr.arpa. Internet PTR ?
+141   0.00442      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 142   0.00011 172.31.20.72 -> 104.16.126.51 UDP D=33463 S=33900 LEN=20
 143   5.00019 172.31.20.72 -> 104.16.126.51 UDP D=33464 S=33900 LEN=20
 144   0.00098 54.239.111.253 -> 172.31.20.72 ICMP Time exceeded (in transit)
-145   0.00026 172.31.20.72 -> one.one.one.one DNS C 253.111.239.54.in-addr.arpa. Internet PTR ?
-146   0.09064 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-147   0.00032 172.31.20.72 -> one.one.one.one DNS C 253.111.239.54.in-addr.arpa. Internet PTR ?
-148   0.18867 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+145   0.00026 172.31.20.72 -> 1.1.1.1      DNS C 253.111.239.54.in-addr.arpa. Internet PTR ?
+146   0.09064      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+147   0.00032 172.31.20.72 -> 1.1.1.1      DNS C 253.111.239.54.in-addr.arpa. Internet PTR ?
+148   0.18867      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 149   0.00021 172.31.20.72 -> 104.16.126.51 UDP D=33465 S=33900 LEN=20
 150   5.00015 172.31.20.72 -> 104.16.126.51 UDP D=33466 S=33900 LEN=20
 151   0.00090 54.239.111.229 -> 172.31.20.72 ICMP Time exceeded (in transit)
-152   0.00026 172.31.20.72 -> one.one.one.one DNS C 229.111.239.54.in-addr.arpa. Internet PTR ?
-153   0.09570 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-154   0.00031 172.31.20.72 -> one.one.one.one DNS C 229.111.239.54.in-addr.arpa. Internet PTR ?
-155   0.17444 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+152   0.00026 172.31.20.72 -> 1.1.1.1      DNS C 229.111.239.54.in-addr.arpa. Internet PTR ?
+153   0.09570      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+154   0.00031 172.31.20.72 -> 1.1.1.1      DNS C 229.111.239.54.in-addr.arpa. Internet PTR ?
+155   0.17444      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 156   0.00020 172.31.20.72 -> 104.16.126.51 UDP D=33467 S=33900 LEN=20
 157   0.00120 206.126.237.30 -> 172.31.20.72 ICMP Time exceeded (in transit)
-158   0.00020 172.31.20.72 -> one.one.one.one DNS C 30.237.126.206.in-addr.arpa. Internet PTR ?
-159   0.00297 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-160   0.00015 172.31.20.72 -> one.one.one.one DNS C 30.237.126.206.in-addr.arpa. Internet PTR ?
-161   0.09410 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+158   0.00020 172.31.20.72 -> 1.1.1.1      DNS C 30.237.126.206.in-addr.arpa. Internet PTR ?
+159   0.00297      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+160   0.00015 172.31.20.72 -> 1.1.1.1      DNS C 30.237.126.206.in-addr.arpa. Internet PTR ?
+161   0.09410      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 162   0.00019 172.31.20.72 -> 104.16.126.51 UDP D=33468 S=33900 LEN=20
 163   0.02399 52.93.114.30 -> 172.31.20.72 ICMP Time exceeded (in transit)
-164   0.00022 172.31.20.72 -> one.one.one.one DNS C 30.114.93.52.in-addr.arpa. Internet PTR ?
-165   0.00677 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-166   0.00016 172.31.20.72 -> one.one.one.one DNS C 30.114.93.52.in-addr.arpa. Internet PTR ?
-167   0.00411 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+164   0.00022 172.31.20.72 -> 1.1.1.1      DNS C 30.114.93.52.in-addr.arpa. Internet PTR ?
+165   0.00677      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+166   0.00016 172.31.20.72 -> 1.1.1.1      DNS C 30.114.93.52.in-addr.arpa. Internet PTR ?
+167   0.00411      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 168   0.00008 172.31.20.72 -> 104.16.126.51 UDP D=33469 S=33900 LEN=20
 169   0.00160 206.126.237.30 -> 172.31.20.72 ICMP Time exceeded (in transit)
 170   0.00014 172.31.20.72 -> 104.16.126.51 UDP D=33470 S=33900 LEN=20
 171   0.00052 104.16.126.51 -> 172.31.20.72 ICMP Destination unreachable (UDP port 33470 unreachable)
-172   0.00013 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-173   0.00609 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+172   0.00013 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+173   0.00609      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 174   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 175   0.03204  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-176   0.00006 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-177   0.00627 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+176   0.00006 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+177   0.00627      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 178   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 179   0.01326  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-180   0.00009 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-181   0.00274 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+180   0.00009 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+181   0.00274      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 182   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 183   0.01362  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-184   0.00004 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-185   0.01242 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+184   0.00004 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+185   0.01242      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 186   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 187   0.01359  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-188   0.00006 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-189   0.00670 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+188   0.00006 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+189   0.00670      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 190   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 191   0.01365  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-192   0.00004 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-193   0.00474 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+192   0.00004 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+193   0.00474      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 194   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 195   0.01321  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-196   0.00007 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-197   0.00725 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+196   0.00007 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+197   0.00725      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 198   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 199   0.01249  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-200   0.00008 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-201   0.00263 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+200   0.00008 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+201   0.00263      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 202   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 203   0.01369  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-204   0.00023 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-205   0.00300 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+204   0.00023 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+205   0.00300      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 206   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 207   0.01238  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-208   0.00004 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-209   0.00216 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+208   0.00004 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+209   0.00216      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 210   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 211   0.01490  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 212   0.00012 172.31.20.72 -> 104.16.126.51 UDP D=33471 S=33900 LEN=20
 213   0.00160 54.239.111.255 -> 172.31.20.72 ICMP Time exceeded (in transit)
-214   0.00017 172.31.20.72 -> one.one.one.one DNS C 255.111.239.54.in-addr.arpa. Internet PTR ?
-215   0.17311 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
-216   0.00031 172.31.20.72 -> one.one.one.one DNS C 255.111.239.54.in-addr.arpa. Internet PTR ?
-217   0.17125 one.one.one.one -> 172.31.20.72 DNS R  Error: 3(Name Error)
+214   0.00017 172.31.20.72 -> 1.1.1.1      DNS C 255.111.239.54.in-addr.arpa. Internet PTR ?
+215   0.17311      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
+216   0.00031 172.31.20.72 -> 1.1.1.1      DNS C 255.111.239.54.in-addr.arpa. Internet PTR ?
+217   0.17125      1.1.1.1 -> 172.31.20.72 DNS R  Error: 3(Name Error)
 218   0.00020 172.31.20.72 -> 104.16.126.51 UDP D=33472 S=33900 LEN=20
 219   0.00080 104.16.126.51 -> 172.31.20.72 ICMP Destination unreachable (UDP port 33472 unreachable)
-220   0.00021 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-221   0.01078 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+220   0.00021 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+221   0.01078      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 222   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 223   0.01360  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-224   0.00004 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-225   0.00869 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+224   0.00004 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+225   0.00869      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 226   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 227   0.01206  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-228   0.00016 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-229   0.00524 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+228   0.00016 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+229   0.00524      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 230   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 231   0.01316  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
-232   0.00005 172.31.20.72 -> one.one.one.one DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
-233   0.01013 one.one.one.one -> 172.31.20.72 DNS R  Error: 2(Server Fail)
+232   0.00005 172.31.20.72 -> 1.1.1.1      DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
+233   0.01013      1.1.1.1 -> 172.31.20.72 DNS R  Error: 2(Server Fail)
 234   0.00004 172.31.20.72 -> 80.80.80.80  DNS C 51.126.16.104.in-addr.arpa. Internet PTR ?
 235   0.01360  80.80.80.80 -> 172.31.20.72 DNS R  Error: 2(Server Fail)

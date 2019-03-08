@@ -32,9 +32,9 @@ fedora$ sudo tcpdump -n -r traceroute.dump
 
 snoop
 =====
-omni$ snoop -r -o traceroute.snoop 'udp or icmp' >&/dev/null &
+omni$ snoop -o traceroute.snoop 'udp or icmp' >&/dev/null &
 omni$ traceroute www.stevens.edu > trace.txt
 omni$ fg
 ^C
-omni$ sudo snoop -i traceroute.snoop
+omni$ snoop -r -i traceroute.snoop
 
