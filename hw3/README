@@ -10,6 +10,17 @@
 - had no clue what in-addr.arpa was, but after a quick google, i discovered
 it for IPv4 reverse dns lookup, and the address is prepended in reverse, from 
 least significant octet to most significant
+- made a func:
+`function find_hop() { cat traceroute.txt | grep $1 | awk '{ print $1 }' }`
+- after looking through the lines of tcpdump, I decided to make a crude
+node.js script that will read through the lines and get the output 
+that I wanted
+
+
+# TODO - ask slack
+- DNS showing up in snoop?
+- does jan want the traceroute
+
 
 traceroute
 ==========
