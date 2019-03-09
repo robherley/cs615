@@ -49,6 +49,9 @@ for (let line of splitlines) {
     console.log(line.join(' '), '\n');
   } else if (line.includes('UDP,')) {
     console.log('(UDP to Destination)', '\n');
+  } else if (line.includes('ServFail')) {
+    console.log('- DNS ServFail (Not sure what this is)');
+    console.log(line.join(' '), '\n');
   } else {
     console.log('how did i get here');
     console.log(line.join(' '), '\n');

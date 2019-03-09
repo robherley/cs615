@@ -1,40 +1,57 @@
-- installing traceroute and tcpdump with yum
-- not knowing how omnios to use snoop (read man page)
-  - already had snoop and traceroute installed
-  - snoop has an option to listen to packets on /dev/audio 
-  - turns out snoop has pratically the same expression syntax as tcpdump
-  - use -o to write to file, -i to read
-  - use -r to prevent IP address to symbolic name
-- traceroute on fedora was significantly faster than omnios (and macos)
-- fedora's default traceroute packet size was 60 bytes, omnios was 40 bytes
-- had no clue what in-addr.arpa was, but after a quick google, i discovered
-it for IPv4 reverse dns lookup, and the address is prepended in reverse, from 
-least significant octet to most significant
-- made a func:
-`function find_hop() { cat traceroute.txt | grep $1 | awk '{ print $1 }' }`
-- after looking through the lines of tcpdump, I decided to make a crude
-node.js script that will read through the lines and get the output 
-that I wanted
-- traceroute on omnios chose 104.16.126.51, whereas fedora chose 155.246.21.100
+Robert Herley <rherley>
+HW3 - Packet Captures
 
-# TODO - ask slack
-- DNS showing up in snoop?
-- does jan want the traceroute
+Capturing traceroute Packets
+============================
+I started with Fedora and tcpdump(8), which I figured would be much easier to 
+start with, compared to OmniOS and snoop(1M), which I've never used before. 
+After installing tcpdump and traceroute with yum, I ran the following commands 
+to collect UDP and ICMP traceroute packets:
 
-
-traceroute
-==========
+tcpdump
+-------
 fedora$ sudo tcpdump -w traceroute.dump 'icmp or udp' >&/dev/null &
 fedora$ traceroute www.stevens.edu > trace.txt
 fedora$ fg 
 ^C
 fedora$ sudo tcpdump -n -r traceroute.dump
 
+This went fairly well, the man page for tcpdump was useful for finding out the
+filters, and discovering that `-n` prevents host addresses to names, which made
+it easier to look at the IPs rather than hostnames. After I inspected the
+tcpdump, I was able to make a very crude Node.js script to speed up my parsing
+and annotating of the traffic. I noticed for the 16th Hop, the ICMP response
+had a "host 155.246.21.100 unreachable" message, which I assume was some sort of
+firewall used by Stevens (which is probably CloudFlare).
+
+Using snoop and OmniOS was slightly more challenging, as the online support and
+documentation for snoop(1M) was not as prominent as tcpdump(8). Also, I've never
+used a OpenSolaris-based distribution before. Luckily, traceroute(1M) was
+already installed. While inspecting the man pages for snoop(1M), I noticed there
+was an option to listen to packets on /dev/audio, which I thought was extremely
+interesting. Also, snoop(1M) had a similar filtering syntax to tcpdump(8),
+which was quite convenient. I collected the traceroute packets with the
+following commands:
+
 snoop
-=====
+-----
 omni$ snoop -o traceroute.snoop 'udp or icmp' >&/dev/null &
 omni$ traceroute www.stevens.edu > trace.txt
 omni$ fg
 ^C
 omni$ snoop -r -i traceroute.snoop
 
+In snoop(1M), `-r` is used to prevent the IP address translation to symbolic
+names. The snoop(1M) output was quite different from tcpdump(8), but it was
+easily understandable. Again, I made a simple Node.js script to assist with the
+annotation of the snoop output.
+
+Some notable differences between the two OS was that Fedora's default traceroute
+packet size was 60 bytes, whereas OmniOS's was 40 bytes. In addition, Fedora's
+traceroute was also much faster (still unsure why this is the case). Also, I 
+had no clue what `in-addr.arpa` was at first, but after a quick Google, I
+discovered it is for IPv4 reverse DNS lookup, and the address is prepended in
+reverse, from least significant octet to most significant. I was also curious
+why traceroute had different IPs for the same hop, but I figured it was due to
+load balancing. And, the final hop lead to an IP address managed by CloudFlare,
+and stopped there, which is probably for protection of Stevens' servers.
