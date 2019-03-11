@@ -4,6 +4,8 @@ www.cs.stevens.edu
 Starts from the UK, goes to Finland, then Switzerland and ends up in the
 Newark/Hoboken area, and then Stevens. Some operators that the trace went
 through were UpCloud, Telia (used by NJEdge apparently).
+- Local Open Traceroute
+Starts in Hoboken, gets to Stevens, then crashes the program?
 
 www.uni-marburg.de
 ==================
@@ -11,6 +13,11 @@ www.uni-marburg.de
 Starts from the UK, goes to Finland and back to the UK, then straight into 
 Kansas. After Kansas, the rest end up in Germany. Again, UpCloud was seen in the
 trace but CenturyLink and Deutsches Forschungsnetz (DFN) were also present.
+- Local Traceroute (Open Traceroute)
+Starts in Hoboken, stays in Jersey for a few hops, then goes to New York then
+Kansas and ends in Germany. After the 15th hop none of the following dropped,
+packets were recognized. I did notice CenturyLink and Optimum appeared along
+the trace.
 
 www.uba.ar
 ==========
@@ -19,7 +26,11 @@ Starts from the UK, goes to Finland and back to the UK. After dropped packets
 not being acknowledge, the trace eventually ends up in New York, then shoots
 down to Paraguay and ends up in Buenos Aires, Argentina. UpCloud was seen again
 in this trace as well as CenturyLink. Also, Claro was seen in this trace.
-
+- Local Traceroute (Open Traceroute)
+Starts in Hoboken, then New York for a few hops. The 9th hop doesn't report
+back the dropped packet but then the trace ends up in New York for one hop and
+then jumps to Paraguay and then the 13th Hop didn't resolve. CenturyLink and
+Optimum were seen again along the trace.
 
 www.hawaii.edu
 ==============
@@ -29,6 +40,10 @@ California, then moving to Northern California and then Honolulu. Unfortunately,
 after the 9th hop, none of the following dropped packets were recognized. Again,
 UpCloud, CenturyLink were seen again, and new operators such as CENIC and UH
 Net were observed.
+- Local Traceroute (Open Traceroute)
+Starts in Hoboken, then New York. Hops to Kansas and then California.
+Unfortunately, it doesn't resolve at the 12th hop. Again, CenturyLink and
+Optimum were seen again along the trace.
 
 www.hku.hk
 ==========
@@ -38,6 +53,11 @@ to Switzerland, then back to Kansas for a few hops, then to Hong Kong. It goes
 down to Australia for one hop then back up to Hong Kong. After the 14th hop,
 none of the following dropped packets were recognized. Some operators noticed
 were Cogent Communications and City Telecom (www.ctinets.com).
+- Local Traceroute (Open Traceroute)
+Starts in Hoboken, then New York and then Kansas. Stays in Kansas for about
+10 hops, then moving to Hong Kong for a few hops. After the 24th hop, none of
+the other dropped packets were reported. CenturyLink, Optimum and City Telecom
+were seen along the trace.
 
 www.du.ac.in
 ============
@@ -45,6 +65,11 @@ www.du.ac.in
 Starts in UK, goes to California, goes back to UK, then to Mumbai, India. After
 the 7th hop, none of the following dropped packets were recognized. The
 operators seen in the trace were Hurricane Electric and Reliance Globalcom.
+- Local Traceroute (Open Traceroute)
+Starts in Hoboken, goes to NY and then jumps to UK then Switzerland. It then
+goes back to the UK and finally ends up in India. After the 17th hop, none of
+the dropped packets were reported. Optimum and Vodafone were seen along the
+trace.
 
 www.usyd.edu.au
 ===============
@@ -54,4 +79,8 @@ traceroute on that domain instead.
 - Visual Traceroute
 Starts in UK, goes to Kansas, then Colorado (from the 5th-11th hops), then goes
 to Western Australia, and then ends up in Sydney. Cogent Communications, NTT
-Communications and AARNet were seen along the trace
+Communications and AARNet were seen along the trace.
+- Local Traceroute (Open Traceroute)
+Starts in Hoboken, goes to NY, then Kansas. After Kansas, it goes to Colorado
+and Australia for a few hops before stopping in Sydney. Optimum, NTT
+Communications and AARNet were seen along the trace.

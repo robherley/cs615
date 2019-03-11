@@ -101,3 +101,14 @@ packets, the EC2 instance sends a SYN to a Digital Ocean server, and then the
 server resets the connection. I'm still not sure what the reasoning is behind
 that.
 
+
+Visual Traceroutes
+==================
+
+- same/similar companies seen
+- a lot of back and forth
+- a lot of hops in same location
+
+TODO:
+- ASes
+- Traceroutes from laptop (Open Visual Traceroute)
