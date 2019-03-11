@@ -63,9 +63,6 @@ The first annoyance I noticed was that after I recorded the first tcpdump for
 TCP on the fedora instance, it was filled with the SSH traffic from my physical
 machine, so I had to go back and filter out that traffic. 
 
-Commands To Collect Packets
----------------------------
-
 fedora$ sudo tcpdump -w telnet.pcap 'tcp and not port 22' >&/dev/null &
 fedora$ telnet example.com 80
 Trying 93.184.216.34...

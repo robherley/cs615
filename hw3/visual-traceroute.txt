@@ -1,0 +1,57 @@
+www.cs.stevens.edu
+==================
+- Visual Traceroute
+Starts from the UK, goes to Finland, then Switzerland and ends up in the
+Newark/Hoboken area, and then Stevens. Some operators that the trace went
+through were UpCloud, Telia (used by NJEdge apparently).
+
+www.uni-marburg.de
+==================
+- Visual Traceroute
+Starts from the UK, goes to Finland and back to the UK, then straight into 
+Kansas. After Kansas, the rest end up in Germany. Again, UpCloud was seen in the
+trace but CenturyLink and Deutsches Forschungsnetz (DFN) were also present.
+
+www.uba.ar
+==========
+- Visual Traceroute
+Starts from the UK, goes to Finland and back to the UK. After dropped packets
+not being acknowledge, the trace eventually ends up in New York, then shoots
+down to Paraguay and ends up in Buenos Aires, Argentina. UpCloud was seen again
+in this trace as well as CenturyLink. Also, Claro was seen in this trace.
+
+
+www.hawaii.edu
+==============
+- Visual Traceroute
+Starts from the UK, goes to Finland and back to the UK. Then ends up in Southern
+California, then moving to Northern California and then Honolulu. Unfortunately,
+after the 9th hop, none of the following dropped packets were recognized. Again,
+UpCloud, CenturyLink were seen again, and new operators such as CENIC and UH
+Net were observed.
+
+www.hku.hk
+==========
+- Visual Traceroute
+Starts from the UK, stays in UK and then goes to Kansas. After Kansas, it goes
+to Switzerland, then back to Kansas for a few hops, then to Hong Kong. It goes
+down to Australia for one hop then back up to Hong Kong. After the 14th hop,
+none of the following dropped packets were recognized. Some operators noticed
+were Cogent Communications and City Telecom (www.ctinets.com).
+
+www.du.ac.in
+============
+- Visual Traceroute
+Starts in UK, goes to California, goes back to UK, then to Mumbai, India. After
+the 7th hop, none of the following dropped packets were recognized. The
+operators seen in the trace were Hurricane Electric and Reliance Globalcom.
+
+www.usyd.edu.au
+===============
+The host (www.usyd.edu.au) redirected to https://sydney.edu.au/, so I ran the
+traceroute on that domain instead.
+
+- Visual Traceroute
+Starts in UK, goes to Kansas, then Colorado (from the 5th-11th hops), then goes
+to Western Australia, and then ends up in Sydney. Cogent Communications, NTT
+Communications and AARNet were seen along the trace
