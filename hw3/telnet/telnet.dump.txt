@@ -1,0 +1,16 @@
+02:38:35.025349 IP 172.31.25.24.56494 > 93.184.216.34.http: Flags [SEW], seq 3002263246, win 29200, options [mss 1460,sackOK,TS val 1197675600 ecr 0,nop,wscale 6], length 0
+02:38:35.025964 IP 93.184.216.34.http > 172.31.25.24.56494: Flags [S.E], seq 2678485415, ack 3002263247, win 65535, options [mss 1460,sackOK,TS val 950308706 ecr 1197675600,nop,wscale 9], length 0
+02:38:35.025993 IP 172.31.25.24.56494 > 93.184.216.34.http: Flags [.], ack 1, win 457, options [nop,nop,TS val 1197675601 ecr 950308706], length 0
+02:38:43.577070 IP 172.31.25.24.56494 > 93.184.216.34.http: Flags [P.], seq 1:18, ack 1, win 457, options [nop,nop,TS val 1197684152 ecr 950308706], length 17: HTTP: HEAD / HTTP/1.1
+02:38:43.577686 IP 93.184.216.34.http > 172.31.25.24.56494: Flags [.], ack 18, win 283, options [nop,nop,TS val 950317258 ecr 1197684152], length 0
+02:38:52.563748 IP 172.31.25.24.56494 > 93.184.216.34.http: Flags [P.], seq 18:41, ack 1, win 457, options [nop,nop,TS val 1197693139 ecr 950317258], length 23: HTTP
+02:38:52.564379 IP 93.184.216.34.http > 172.31.25.24.56494: Flags [.], ack 41, win 283, options [nop,nop,TS val 950326245 ecr 1197693139], length 0
+02:38:53.761899 IP 172.31.25.24.56494 > 93.184.216.34.http: Flags [P.], seq 41:43, ack 1, win 457, options [nop,nop,TS val 1197694337 ecr 950326245], length 2: HTTP
+02:38:53.762535 IP 93.184.216.34.http > 172.31.25.24.56494: Flags [.], ack 43, win 283, options [nop,nop,TS val 950327443 ecr 1197694337], length 0
+02:38:53.763118 IP 93.184.216.34.http > 172.31.25.24.56494: Flags [P.], seq 1:344, ack 43, win 283, options [nop,nop,TS val 950327444 ecr 1197694337], length 343: HTTP: HTTP/1.1 200 OK
+02:38:53.763126 IP 172.31.25.24.56494 > 93.184.216.34.http: Flags [.], ack 344, win 473, options [nop,nop,TS val 1197694338 ecr 950327444], length 0
+02:38:55.393795 IP 68.183.35.95.46187 > 172.31.25.24.radan-http: Flags [S], seq 1858998780, win 65535, length 0
+02:38:55.393823 IP 172.31.25.24.radan-http > 68.183.35.95.46187: Flags [R.], seq 0, ack 1858998781, win 0, length 0
+02:39:01.273199 IP 172.31.25.24.56494 > 93.184.216.34.http: Flags [F.], seq 43, ack 344, win 473, options [nop,nop,TS val 1197701848 ecr 950327444], length 0
+02:39:01.273998 IP 93.184.216.34.http > 172.31.25.24.56494: Flags [F.], seq 344, ack 44, win 283, options [nop,nop,TS val 950334955 ecr 1197701848], length 0
+02:39:01.274011 IP 172.31.25.24.56494 > 93.184.216.34.http: Flags [.], ack 345, win 473, options [nop,nop,TS val 1197701849 ecr 950334955], length 0

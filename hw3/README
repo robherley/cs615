@@ -48,10 +48,59 @@ annotation of the snoop output.
 
 Some notable differences between the two OS was that Fedora's default traceroute
 packet size was 60 bytes, whereas OmniOS's was 40 bytes. In addition, Fedora's
-traceroute was also much faster (still unsure why this is the case). Also, I 
+traceroute was also much faster (still unsure why this is the case). Also, I
 had no clue what `in-addr.arpa` was at first, but after a quick Google, I
 discovered it is for IPv4 reverse DNS lookup, and the address is prepended in
 reverse, from least significant octet to most significant. I was also curious
 why traceroute had different IPs for the same hop, but I figured it was due to
 load balancing. And, the final hop lead to an IP address managed by CloudFlare,
 and stopped there, which is probably for protection of Stevens' servers.
+
+Capturing telnet Packets
+========================
+
+The first annoyance I noticed was that after I recorded the first tcpdump for
+TCP on the fedora instance, it was filled with the SSH traffic from my physical
+machine, so I had to go back and filter out that traffic. 
+
+Commands To Collect Packets
+---------------------------
+
+fedora$ sudo tcpdump -w telnet.pcap 'tcp and not port 22' >&/dev/null &
+fedora$ telnet example.com 80
+Trying 93.184.216.34...
+Connected to example.com.
+Escape character is '^]'.
+HEAD / HTTP/1.1
+Host: www.example.com
+
+HTTP/1.1 200 OK
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Mon, 11 Mar 2019 02:38:53 GMT
+Etag: "1541025663+gzip"
+Expires: Mon, 18 Mar 2019 02:38:53 GMT
+Last-Modified: Fri, 09 Aug 2013 23:54:35 GMT
+Server: ECS (dcb/7F83)
+X-Cache: HIT
+Content-Length: 606
+
+^]
+
+telnet> close
+Connection closed.
+fedora$ fg
+^C
+
+A lot of the websites I tested with telnet use SSL or some sort of reverse proxy
+which resulted in a lot of redirect responses. Luckily, example.com gave a
+plain 200 response with HTTP/1.1. After that was recorded, I was able to SFTP
+into the instance and copy the PCAP file to my machine and open it in Wireshark.
+
+One quite interesting occurrence was that towards the end of the list of
+packets, the EC2 instance sends a SYN to a Digital Ocean server, and then the
+server resets the connection. I'm still not sure what the reasoning is behind
+that.
+
