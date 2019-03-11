@@ -1,0 +1,44 @@
+ 1  [AS16889] 155.246.6.131 (155.246.6.131)  7.755 ms  7.705 ms  6.788 ms
+ 2  [AS16889] 155.246.151.93 (155.246.151.93)  8.947 ms  40.436 ms  43.565 ms
+ 3  [AS16889] gwa.cc.stevens.edu (155.246.151.37)  26.057 ms  7.919 ms  9.039 ms
+ 4  [AS6128] 454a0465.cst.lightpath.net (69.74.4.101)  11.604 ms  11.608 ms  12.945 ms
+ 5  [AS20001] 18267506.cst.lightpath.net (24.38.117.6)  10.389 ms  15.196 ms  11.666 ms
+ 6  [AS6128] hunt183-150.optonline.net (167.206.183.150)  16.009 ms  20.520 ms  12.128 ms
+ 7  [AS0] 451be0bd.cst.lightpath.net (65.19.113.189)  12.403 ms  14.199 ms  34.334 ms
+ 8  * * *
+ 9  [AS174] be3362.ccr41.jfk02.atlas.cogentco.com (154.54.3.9)  9.902 ms
+    [AS174] be3363.ccr42.jfk02.atlas.cogentco.com (154.54.3.125)  17.426 ms
+    [AS174] be3362.ccr41.jfk02.atlas.cogentco.com (154.54.3.9)  10.883 ms
+10  [AS174] be2890.ccr22.cle04.atlas.cogentco.com (154.54.82.245)  26.561 ms
+    [AS174] be2889.ccr21.cle04.atlas.cogentco.com (154.54.47.49)  26.226 ms
+    [AS174] be2890.ccr22.cle04.atlas.cogentco.com (154.54.82.245)  24.267 ms
+11  [AS174] be2717.ccr41.ord01.atlas.cogentco.com (154.54.6.221)  36.949 ms
+    [AS174] be2718.ccr42.ord01.atlas.cogentco.com (154.54.7.129)  28.331 ms
+    [AS174] be2717.ccr41.ord01.atlas.cogentco.com (154.54.6.221)  26.837 ms
+12  [AS174] be2831.ccr21.mci01.atlas.cogentco.com (154.54.42.165)  59.182 ms  58.309 ms
+    [AS174] be2832.ccr22.mci01.atlas.cogentco.com (154.54.44.169)  57.882 ms
+13  [AS174] be3036.ccr22.den01.atlas.cogentco.com (154.54.31.89)  75.042 ms
+    [AS174] be3035.ccr21.den01.atlas.cogentco.com (154.54.5.89)  51.388 ms
+    [AS174] be3036.ccr22.den01.atlas.cogentco.com (154.54.31.89)  69.628 ms
+14  [AS174] be3037.ccr21.slc01.atlas.cogentco.com (154.54.41.145)  63.576 ms
+    [AS174] be3038.ccr32.slc01.atlas.cogentco.com (154.54.42.97)  65.757 ms
+    [AS174] be3037.ccr21.slc01.atlas.cogentco.com (154.54.41.145)  62.134 ms
+15  [AS174] be3284.ccr22.sea02.atlas.cogentco.com (154.54.44.73)  76.834 ms
+    [AS174] 154.54.89.101 (154.54.89.101)  77.893 ms
+    [AS174] be2029.ccr22.sea02.atlas.cogentco.com (154.54.86.110)  77.174 ms
+16  [AS174] be2670.ccr21.pdx01.atlas.cogentco.com (154.54.42.150)  79.530 ms
+    [AS174] be2671.ccr21.pdx01.atlas.cogentco.com (154.54.31.78)  80.597 ms  92.860 ms
+17  [AS174] be3701.ccr21.hkg02.atlas.cogentco.com (154.54.87.122)  324.425 ms  264.387 ms  212.697 ms
+18  [AS174] be3453.rcr51.hkg01.atlas.cogentco.com (154.54.0.17)  285.794 ms  259.182 ms  245.700 ms
+19  [AS0] hkbn.demarc.cogentco.com (154.18.4.82)  275.212 ms  274.685 ms  433.794 ms
+20  [AS9269] 061244224066.ctinets.com (61.244.224.66)  406.568 ms  263.082 ms  274.110 ms
+21  * * *
+22  [AS9269] 183178024002.ctinets.com (183.178.24.2)  245.255 ms  248.504 ms  244.691 ms
+23  [AS10103] 203.188.117.2 (203.188.117.2)  280.099 ms  279.754 ms  281.492 ms
+24  [AS45474] 147.8.239.15 (147.8.239.15)  261.998 ms  275.701 ms  308.275 ms
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *

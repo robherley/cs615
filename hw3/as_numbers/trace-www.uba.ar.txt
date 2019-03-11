@@ -1,0 +1,13 @@
+ 1  [AS16889] 155.246.6.131 (155.246.6.131)  15.302 ms  21.221 ms  10.582 ms
+ 2  [AS16889] 155.246.151.93 (155.246.151.93)  10.305 ms  57.942 ms  10.652 ms
+ 3  [AS16889] gwa.cc.stevens.edu (155.246.151.37)  14.474 ms  14.297 ms  9.250 ms
+ 4  [AS6128] 454a0465.cst.lightpath.net (69.74.4.101)  17.622 ms  92.938 ms  76.156 ms
+ 5  [AS20001] 18267502.cst.lightpath.net (24.38.117.2)  41.535 ms  14.464 ms  31.053 ms
+ 6  [AS6128] 41332aa5.cst.lightpath.net (65.51.42.165)  15.166 ms  20.555 ms  14.067 ms
+ 7  [AS6128] hunt183-209.optonline.net (167.206.183.209)  17.135 ms  33.162 ms  46.193 ms
+ 8  [AS0] 451be09e.cst.lightpath.net (65.19.113.158)  13.705 ms  36.103 ms  38.662 ms
+ 9  * * *
+10  * * *
+11  [AS3356] amx-argenti.ear4.miami2.level3.net (4.15.158.154)  174.491 ms
+    [AS3356] amx-argenti.ear4.miami2.level3.net (4.15.156.46)  176.088 ms  176.831 ms
+12  [AS19037] be4-1-cf223-igw-01-bsas.claro.com.ar (131.100.186.97)  172.815 ms  172.859 ms  175.791 ms

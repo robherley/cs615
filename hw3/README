@@ -8,13 +8,13 @@ start with, compared to OmniOS and snoop(1M), which I've never used before.
 After installing tcpdump and traceroute with yum, I ran the following commands 
 to collect UDP and ICMP traceroute packets:
 
-tcpdump
--------
-fedora$ sudo tcpdump -w traceroute.dump 'icmp or udp' >&/dev/null &
-fedora$ traceroute www.stevens.edu > trace.txt
-fedora$ fg 
-^C
-fedora$ sudo tcpdump -n -r traceroute.dump
+  tcpdump
+  -------
+  fedora$ sudo tcpdump -w traceroute.dump 'icmp or udp' >&/dev/null &
+  fedora$ traceroute www.stevens.edu > trace.txt
+  fedora$ fg 
+  ^C
+  fedora$ sudo tcpdump -n -r traceroute.dump
 
 This went fairly well, the man page for tcpdump was useful for finding out the
 filters, and discovering that `-n` prevents host addresses to names, which made
@@ -33,13 +33,13 @@ interesting. Also, snoop(1M) had a similar filtering syntax to tcpdump(8),
 which was quite convenient. I collected the traceroute packets with the
 following commands:
 
-snoop
------
-omni$ snoop -o traceroute.snoop 'udp or icmp' >&/dev/null &
-omni$ traceroute www.stevens.edu > trace.txt
-omni$ fg
-^C
-omni$ snoop -r -i traceroute.snoop
+  snoop
+  -----
+  omni$ snoop -o traceroute.snoop 'udp or icmp' >&/dev/null &
+  omni$ traceroute www.stevens.edu > trace.txt
+  omni$ fg
+  ^C
+  omni$ snoop -r -i traceroute.snoop
 
 In snoop(1M), `-r` is used to prevent the IP address translation to symbolic
 names. The snoop(1M) output was quite different from tcpdump(8), but it was
@@ -63,33 +63,33 @@ The first annoyance I noticed was that after I recorded the first tcpdump for
 TCP on the fedora instance, it was filled with the SSH traffic from my physical
 machine, so I had to go back and filter out that traffic. 
 
-fedora$ sudo tcpdump -w telnet.pcap 'tcp and not port 22' >&/dev/null &
-fedora$ telnet example.com 80
-Trying 93.184.216.34...
-Connected to example.com.
-Escape character is '^]'.
-HEAD / HTTP/1.1
-Host: www.example.com
+  fedora$ sudo tcpdump -w telnet.pcap 'tcp and not port 22' >&/dev/null &
+  fedora$ telnet example.com 80
+  Trying 93.184.216.34...
+  Connected to example.com.
+  Escape character is '^]'.
+  HEAD / HTTP/1.1
+  Host: www.example.com
 
-HTTP/1.1 200 OK
-Content-Encoding: gzip
-Accept-Ranges: bytes
-Cache-Control: max-age=604800
-Content-Type: text/html; charset=UTF-8
-Date: Mon, 11 Mar 2019 02:38:53 GMT
-Etag: "1541025663+gzip"
-Expires: Mon, 18 Mar 2019 02:38:53 GMT
-Last-Modified: Fri, 09 Aug 2013 23:54:35 GMT
-Server: ECS (dcb/7F83)
-X-Cache: HIT
-Content-Length: 606
+  HTTP/1.1 200 OK
+  Content-Encoding: gzip
+  Accept-Ranges: bytes
+  Cache-Control: max-age=604800
+  Content-Type: text/html; charset=UTF-8
+  Date: Mon, 11 Mar 2019 02:38:53 GMT
+  Etag: "1541025663+gzip"
+  Expires: Mon, 18 Mar 2019 02:38:53 GMT
+  Last-Modified: Fri, 09 Aug 2013 23:54:35 GMT
+  Server: ECS (dcb/7F83)
+  X-Cache: HIT
+  Content-Length: 606
 
-^]
+  ^]
 
-telnet> close
-Connection closed.
-fedora$ fg
-^C
+  telnet> close
+  Connection closed.
+  fedora$ fg
+  ^C
 
 A lot of the websites I tested with telnet use SSL or some sort of reverse proxy
 which resulted in a lot of redirect responses. Luckily, example.com gave a
@@ -99,16 +99,64 @@ into the instance and copy the PCAP file to my machine and open it in Wireshark.
 One quite interesting occurrence was that towards the end of the list of
 packets, the EC2 instance sends a SYN to a Digital Ocean server, and then the
 server resets the connection. I'm still not sure what the reasoning is behind
-that.
+that, maybe someone was probing my EC2 instance.
 
 
 Visual Traceroutes
 ==================
+After running all the traceroutes (both local and using visual traceroute) I
+found that there were a lot of commonly traversed paths depending on region.
+For instance, Optimum's hosts in Kansas and Bethpage, NY appeared multiple times
+in my local traces. For the visual traceroute traces that started in the UK
+region, hostnames from UpCloud in the UKm CenturyLink in Finland and Telia in
+Switzerland. Those companies that were repeatedly seen in the traces were
+probably the tier-1 operators.
 
-- same/similar companies seen
-- a lot of back and forth
-- a lot of hops in same location
+Also, a decent number of the connections did not report back when the packet's
+TTL reached zero, which means some of the hops didn't have an identifiable
+location, which is probably for security reasons.
 
-TODO:
-- ASes
-- Traceroutes from laptop (Open Visual Traceroute)
+  AS Counts
+  ---------
+
+  24 [AS174]
+  20 [AS16889]
+  15 [AS6128]
+    9 [AS1273]
+    8 [AS3356]
+    8 [AS2914]
+    7 [AS0]
+    6 [AS20001]
+    3 [AS680]
+    2 [AS9885]
+    2 [AS9269]
+    2 [AS7575]
+    2 [AS55410]
+    1 [AS9057]
+    1 [AS7570]
+    1 [AS4637]
+    1 [AS45474]
+    1 [AS23719]
+    1 [AS19037]
+    1 [AS10103]
+
+Using a simple bash for loop I got the output of all the traceroutes with '-a'
+to get the AS number:
+
+  for host in `cat hosts.txt`; do
+    echo "starting traceroute for $host"
+    traceroute -m 30 -a $host 2>/dev/null > trace-$host.txt &
+  done
+
+Once they were finished, I was able to count all the seen AS numbers:
+
+  cat trace-* | grep -E -o '\[AS[0-9]+\]' | sort | uniq -c 
+    | sort -nr > as_counts.txt
+
+Using the ASN Lookup Tool (https://www.ultratools.com/tools/asnInfo), I saw that
+the more common ASes seen in the traces were Cogent Communications (AS174),
+Stevens (AS16889 because this was our origin), and Cablevision/Optimum (AS6128).
+Interestingly, AS0 appeared a few times, which belonged to
+451be09e.cst.lightpath.net (65.19.113.158), and according to ARIN is owned by
+Altice/Optimum/Cablevision. I am not sure why the AS number is showing zero
+though.
