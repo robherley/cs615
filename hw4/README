@@ -1,0 +1,87 @@
+Robert Herley <rherley>
+HW4 - Monitoring DNS and HTTP Traffic
+
+Setting Up the Client/Resolver
+==============================
+I chose to use Ubuntu 18.04 (ami-0ac019f4fcb7cb7e6), because it is the distro I
+am most familiar with. Also, I created the instances under the same vpc/subnet
+so they can easily interact with their private IPs. I also used Digital Ocean's 
+guide on installing bind to assist me with the install.
+
+Resolver
+--------
+First, I installed bind:
+
+    $ sudo apt-get install bind9 bind9utils bind9-doc
+
+Then, I forced bind into IPv4 mode:
+
+    $ sudo vim /etc/default/bind9
+ 
+    (Amended 'OPTIONS="-u bind -4"' in the config)
+
+Configure the options file with recursion and query for access control:
+    (prevents DNS amplification attack)
+
+    $ sudo vim /etc/bind/named.conf.options
+ 
+    acl trusted {
+        172.31.19.0/24; # anything on vpc subnet
+	    localhost; # our nameserver
+        localnets; # our localnetwork
+    };
+
+    options {
+		<default options>
+		. . .
+        recursion yes;
+    	allow-query { trusted; };
+    }
+
+Check config and restart bind:
+	
+	$ sudo named-checkconf
+	$ sudo systemctl bind9 restart
+
+
+Client
+------
+Since I am using Ubuntu 18.04, networking is configured with Netplan. So I
+created a file to in /etc/netplan called 99-custom-dns.yaml with the
+following information:
+	network:
+		version: 2
+			ethernets:
+				eth0:
+					nameservers:
+						addresses: [<resolver private ip>]
+
+Then we can check the configuration:
+	$ sudo netplan --debug apply
+
+One problem I encountered was that the DNS server from DHCP appeared in my 
+config when I ran "sudo systemd-resolve --status". It turns out that the
+version of netplan that ships currently with Ubuntu doesn't support ignoring
+DNS servers from DHCP. A temporary solution that I found on AskUbuntu was
+to append "UseDNS=false" to /run/systemd/network/10-netplan-*.network. This is
+more of a hack than a solution, as this option will be overwritten when a new
+netplan config is reapplied. Alternatively, I could have compiled the latest
+netplan from source but this temporary hack was more convienent for finishing
+this assignment. Once I fixed that small issue, systemd-resolve was reporting
+the correct DNS:
+    
+    Link 2 (eth0)
+        . . .
+        DNS Servers: <resolver private ip>
+        . . .
+
+Finally, the client was now fully configured with the DNS resolver. Overall,
+it wasn't too difficult to get running but the confusion was mostly due to
+netplan's weird problem with DHCP DNS.
+
+References:
+http://www.tldp.org/HOWTO/DNS-HOWTO-3.html
+https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-a-caching-or-forwarding-dns-server-on-ubuntu-14-04
+https://www.techrepublic.com/article/how-to-set-dns-nameservers-in-ubuntu-server-18-04/
+https://aws.amazon.com/premiumsupport/knowledge-center/ec2-static-dns-ubuntu-debian/
+https://askubuntu.com/questions/1001241/can-netplan-configured-nameservers-supersede-not-merge-with-the-dhcp-nameserve
