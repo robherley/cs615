@@ -1,0 +1,48 @@
+- Protocol Type
+    HTTP/1.1 200 OK
+- Mime type sent to the client 
+    Content-Type: text/html; charset=UTF-8
+- Datetime of the response
+    Date: Mon, 24 Mar 2019 14:13:02 GMT
+- AWS header to to request server-side encryption
+    x-amz-server-side-encryption: AES256
+- Telling the client how to cache the data (saying to not store cache)
+    Cache-Control: no-store, no-cache, max-age=0, private
+- Tell the client the data is compressed gzip
+    Content-Encoding: gzip
+- Telling us the server is an Apache Traffic Server
+    Server: ATS
+- Tells us whether or not the data was served from cache 
+  (Miss tells us it is not served from CloudFront CDN)
+    X-Cache: Miss from cloudfront
+- Used for proxies to track forwards and avoid loops
+    Via: 1.1 4a7b695b8ae560fe9087da065a2b7812.cloudfront.net (CloudFront), https/1.1 media-ncache-fp29.prod.media.ne1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1 media-ncache-fp29.prod.media.ne1.yahoo.com (ApacheTrafficServer [cSsSfU]), http/1.1 media-ncache-fp29.prod.media.ne1.yahoo.com (ApacheTrafficServer [cRs f ]), http/1.1 media-ncache-fp22.prod.media.ne1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1 media-router-fp1006.prod.media.ne1.yahoo.com (ApacheTrafficServer [cMsSf ])
+- CloudFront adds this header to the viewer request before forwarding 
+  the request, it an encrypted string that uniquely identifies the request.
+    X-Amz-Cf-Id: c-l9sLdFHQFOcGr6un4yM0Se34B_tAVBtrkATEDi5-DDt9I4jxFYiA==
+- The time in seconds the object has been in a proxy cache
+    Age: 252
+- The length of the content (in bytes)
+    Content-Length: 226717
+- Platform for Privacy Preferences, describes a compact policy
+  (https://www.w3.org/TR/P3P11/#compact_policies)
+    P3P: policyref="http://info.yahoo.com/w3c/p3p.xml, CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV
+- Set the date/time for the data to expire (-1 for always expire)
+    Expires: -1
+- Tells the client to keep the connection active so they can download multiple 
+  files without creating new connections.
+    Connection: keep-alive
+- Tells the HTTP client how long to cache the HTTPS only policy
+    Strict-Transport-Security: max-age=31536000
+- CSP helps detect and mitigate attacks like XSS and data injection
+    Content-Security-Policy: sandbox allow-forms allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox allow-presentation; report-uri https://csp.yahoo.com/beacon/csp?src=ats&site=frontpage&region=US&lang=en-US&device=&yrid=0j78h51e9hon9&partner=;
+- Indicates whether the browser should allow the webpage to be displayed in a
+  frame within another webpage. SAMEORIGIN only allows webpages on the same
+  origin as the original to webpage to display the data in a frame.
+    X-Frame-Options: SAMEORIGIN
+- Tells the browser to stop pages from loading when they detect cross-site
+  scripting attacks
+    X-XSS-Protection: 1; report="https://csp.yahoo.com/beacon/csp?src=fp-hpkp-www"
+- Allows sites to report Certificate Transparency requirements, which prevents
+  the use of misissued certificates for that site from going unnoticed.
+    Expect-CT: max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
