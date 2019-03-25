@@ -1,0 +1,49 @@
+- Digital Ocean Probe?
+  18:44:32.634779 IP 68.183.81.48.57890 > 172.31.19.234.radan-http: Flags [S], seq 144707111, win 65535, length 0
+  18:44:32.634805 IP 172.31.19.234.radan-http > 68.183.81.48.57890: Flags [R.], seq 0, ack 144707112, win 0, length 0
+
+- Vultr Probe?
+  18:44:43.250742 IP 140.82.5.194.vultr.com.38250 > 172.31.19.234.radan-http: Flags [S], seq 3427773030, win 65535, length 0
+  18:44:43.250768 IP 172.31.19.234.radan-http > 140.82.5.194.vultr.com.38250: Flags [R.], seq 0, ack 3427773031, win 0, length 0
+
+- Istituto di Informatica e Telematica?
+  18:44:43.275273 IP host23-12-37-46.serverdedicati.aruba.it.36073 > 172.31.19.234.https: Flags [S], seq 1306612733, win 65535, options [mss 1460,nop,nop,sackOK], length 0
+  18:44:43.275286 IP 172.31.19.234.https > host23-12-37-46.serverdedicati.aruba.it.36073: Flags [R.], seq 0, ack 1306612734, win 0, length 0
+
+- Client asking for FB A Record
+  18:44:44.373238 IP 172.31.24.236.40361 > 172.31.19.234.domain: 7463+ [1au] A? facebook.com. (41)
+
+- Request/Response a.gtld-servers.net for FB A record
+  18:44:44.373909 IP 172.31.19.234.34199 > a.gtld-servers.net.domain: 9026 [1au] A? facebook.com. (53)
+  18:44:44.375243 IP a.gtld-servers.net.domain > 172.31.19.234.34199: 9026-| 0/5/5 (486)
+
+  (TCP with a.gtld-servers.net)
+
+- Request b.ns.friendfeed.com for FB A Record
+  18:44:44.378971 IP 172.31.19.234.38395 > b.ns.friendfeed.com.domain: 7205 [1au] A? facebook.com. (53)
+  (TCP with b.ns.friendfeed.com)
+
+- Response b.ns.friendfeed.com with A Record
+  18:44:44.379844 IP b.ns.friendfeed.com.domain > 172.31.19.234.38395: 7205*- 1/2/5 A 31.13.66.35 (180)
+
+- Asking for the DNSSEC signing key
+  18:44:44.380092 IP 172.31.19.234.35630 > b.gtld-servers.net.domain: 57634 [1au] DS? facebook.com. (53)
+  18:44:44.393966 IP b.gtld-servers.net.domain > 172.31.19.234.35630: 57634*-| 0/4/1 (436)
+
+  (TCP with b.gtld-servers.net)
+
+- Sending A record to Client
+  18:44:44.421701 IP 172.31.19.234.domain > 172.31.24.236.40361: 7463 1/0/1 A 31.13.66.35 (57)
+
+  (TCP with b.gtld-servers.net)
+
+Discussion about Forward/Reverse Mappings
+=========================================
+Forward lookup: "dig facebook.com"
+Reverse with IP from forward: "dig -x 31.13.71.36"
+
+The forward lookup responds with the IP 31.13.71.36, but when running the
+reverse, it answers with edge-star-mini-shv-01-lga3.facebook.com. This is
+because Facebook is using load balancing, so when we look forward in DNS we will
+receive an IP (A Record) for one of their servers. But, when going backwards we
+will get a PTR for the specific server that we were load balanced to.

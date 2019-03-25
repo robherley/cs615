@@ -1,0 +1,22 @@
+- Digital Ocean Probe?
+  18:31:23.173754 IP 68.183.37.224.55805 > 172.31.24.236.radan-http: Flags [S], seq 2929882203, win 65535, length 0
+  18:31:23.173780 IP 172.31.24.236.radan-http > 68.183.37.224.55805: Flags [R.], seq 0, ack 2929882204, win 0, length 0
+
+- Request to our Resolver for Yahoo A Record
+  18:31:35.931702 IP 172.31.24.236.53986 > 172.31.19.234.domain: 64957+ [1au] A? www.yahoo.com. (42)
+
+- Request to our Resolver for Yahoo AAAA Record
+  18:31:35.933231 IP 172.31.24.236.51611 > 172.31.19.234.domain: 35739+ [1au] AAAA? www.yahoo.com. (42)
+
+- Response from our Resolver with CNAMEs
+  18:31:36.228627 IP 172.31.19.234.domain > 172.31.24.236.53986: 64957 5/0/1 CNAME atsv2-fp-shed.wg1.b.yahoo.com., A 72.30.35.9, A 98.138.219.231, A 98.138.219.232, A 72.30.35.10 (140)
+  18:31:36.233769 IP 172.31.19.234.domain > 172.31.24.236.51611: 35739 5/0/1 CNAME atsv2-fp-shed.wg1.b.yahoo.com., AAAA 2001:4998:44:41d::3, AAAA 2001:4998:58:1836::10, AAAA 2001:4998:44:41d::4, AAAA 2001:4998:58:1836::11 (188)
+
+- TCP Response
+  18:31:36.234214 IP 172.31.24.236.57600 > media-router-fp2.prod1.media.vip.bf1.yahoo.com.https: Flags [S], seq 930904358, win 29200, options [mss 1460,sackOK,TS val 1025813160 ecr 0,nop,wscale 7], length 0
+  18:31:36.251920 IP media-router-fp2.prod1.media.vip.bf1.yahoo.com.https > 172.31.24.236.57600: Flags [S.], seq 335405980, ack 930904359, win 14480, options [mss 1460,sackOK,TS val 3884297708 ecr 1025813160,nop,wscale 8], length 0
+  (About ~140 lines omitted)
+
+- Another Digital Ocean Probe?
+  18:31:42.984828 IP 68.183.90.206.35708 > 172.31.24.236.radan-http: Flags [S], seq 1067612910, win 65535, length 0
+  18:31:42.984855 IP 172.31.24.236.radan-http > 68.183.90.206.35708: Flags [R.], seq 0, ack 1067612911, win 0, length 0

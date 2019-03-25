@@ -1,0 +1,134 @@
+- Another probe?
+  18:31:26.219553 IP vmi251100.contaboserver.net.59068 > 172.31.19.234.radan-http: Flags [S], seq 1156486060, win 65535, length 0
+  18:31:26.219580 IP 172.31.19.234.radan-http > vmi251100.contaboserver.net.59068: Flags [R.], seq 0, ack 1156486061, win 0, length 0
+
+- Client requesting for Yahoo A Record
+  18:31:35.957962 IP 172.31.24.236.53986 > 172.31.19.234.domain: 64957+ [1au] A? www.yahoo.com. (42)
+
+- Resolver asking a.root-servers.net for Yahoo A Record
+  18:31:35.958721 IP 172.31.19.234.51776 > a.root-servers.net.domain: 9840 [1au] A? www.yahoo.com. (54)
+
+- Client requesting for Yahoo AAAA Record
+  18:31:35.959424 IP 172.31.24.236.51611 > 172.31.19.234.domain: 35739+ [1au] AAAA? www.yahoo.com. (42)
+
+- Resolver asking a.root-servers.net for Yahoo A Record
+  18:31:35.959842 IP 172.31.19.234.34658 > a.root-servers.net.domain: 33006 [1au] AAAA? www.yahoo.com. (54)
+  (TCP Following)
+
+- Resolver asking a.root-servers.net for Yahoo A Record
+  18:31:35.961716 IP 172.31.19.234.57441 > a.root-servers.net.domain: Flags [P.], seq 1:57, ack 1, win 29200, length 5615647 [1au] AAAA? www.yahoo.com. (54)
+  (TCP Following)
+
+- Resolver asking l.gtld-servers.net.domain for Yahoo AAAA Record
+  18:31:35.963548 IP 172.31.19.234.52740 > l.gtld-servers.net.domain: 13424 [1au] AAAA? www.yahoo.com. (54)
+
+  (More TCP with a.root-servers.net)
+
+- Resolver asking l.gtld-servers.net.domain for Yahoo A Record
+  18:31:35.965019 IP 172.31.19.234.53676 > l.gtld-servers.net.domain: 6799 [1au] A? www.yahoo.com. (54)
+
+  (More TCP with a.root-servers.net)
+
+  (TCP with l.gtld-servers.net)
+
+- Resolver asking l.gtld-servers.net.domain for Yahoo AAAA Record
+  18:31:35.978845 IP 172.31.19.234.39257 > l.gtld-servers.net.domain: Flags [P.], seq 1:57, ack 1, win 29200, length 5661522 [1au] AAAA? www.yahoo.com. (54)
+  (TCP Following)
+
+- Resolver asking l.gtld-servers.net for Yahoo A Record
+  18:31:35.979682 IP 172.31.19.234.58951 > l.gtld-servers.net.domain: Flags [P.], seq 1:57, ack 1, win 29200, length 5635658 [1au] A? www.yahoo.com. (54)
+  (TCP Following)
+
+- Resolver asking ns2.yahoo.com for Yahoo A Record
+  18:31:35.986885 IP 172.31.19.234.35382 > ns2.yahoo.com.domain: 14533 [1au] A? www.yahoo.com. (54)
+
+  (More TCP with l.gtld-servers.net)
+
+- Resolver asking ns2.yahoo.com for Yahoo AAAA Record
+  18:31:35.987235 IP 172.31.19.234.56841 > ns2.yahoo.com.domain: 48911 [1au] AAAA? www.yahoo.com. (54)
+
+- Yahoo nameserver responding with CNAME
+  18:31:35.987648 IP ns2.yahoo.com.domain > 172.31.19.234.35382: 14533*- 1/4/3 CNAME atsv2-fp-shed.wg1.b.yahoo.com. (222)
+  18:31:35.987996 IP ns2.yahoo.com.domain > 172.31.19.234.56841: 48911*- 1/4/3 CNAME atsv2-fp-shed.wg1.b.yahoo.com. (222)
+
+- Asking for the DNSSEC signing key of a delegated zone
+  18:31:35.988111 IP 172.31.19.234.40565 > j.root-servers.net.domain: 3694 [1au] DS? com. (44)
+
+  (More TCP with l.gtld-servers.net)
+
+- Identifying the DNSSEC signing key of a delegated zone
+  18:31:36.005625 IP j.root-servers.net.domain > 172.31.19.234.40565: 3694*- 2/0/1 DS, RRSIG (367)
+  18:31:36.006557 IP 172.31.19.234.60124 > b.gtld-servers.net.domain: 37751 [1au] DS? yahoo.com. (50)
+
+  (TCP with b.gtld-servers.net)
+
+- Asking/Receiving key record used in DNSSEC
+  18:31:36.047191 IP 172.31.19.234.46214 > d.gtld-servers.net.domain: 35839 [1au] DNSKEY? com. (44)
+  18:31:36.048520 IP d.gtld-servers.net.domain > 172.31.19.234.46214: 35839*-| 2/0/1 DNSKEY, DNSKEY (452)
+  (TCP with d.gtld-servers.net)
+
+- Resolver asking ns2.yahoo.com for Yahoo A/AAAA Record
+  18:31:36.052985 IP 172.31.19.234.52039 > ns3.yahoo.com.domain: 23379 [1au] A? atsv2-fp-shed.wg1.b.yahoo.com. (70)
+  18:31:36.053089 IP 172.31.19.234.34061 > ns3.yahoo.com.domain: 9622 [1au] AAAA? atsv2-fp-shed.wg1.b.yahoo.com. (70)
+
+  (TCP with d.gtld-servers.net)
+
+- Request yf1.yahoo.com for A record of atsv2-fp-shed.wg1.b.yahoo.com
+  18:31:36.253321 IP 172.31.19.234.37448 > yf1.yahoo.com.domain: 54239 [1au] A? atsv2-fp-shed.wg1.b.yahoo.com. (70)
+
+- Request m.root-servers.net for A record of yf3/yf4.a1.b.yahoo.net
+  18:31:36.253480 IP 172.31.19.234.55491 > m.root-servers.net.domain: 43559% [1au] A? yf3.a1.b.yahoo.net. (59)
+  18:31:36.253590 IP 172.31.19.234.52362 > m.root-servers.net.domain: 45974% [1au] A? yf4.a1.b.yahoo.net. (59)
+
+- Response of A Record from yf1.yahoo.com
+  18:31:36.254270 IP yf1.yahoo.com.domain > 172.31.19.234.37448: 54239*- 4/0/1 A 98.138.219.232, A 98.138.219.231, A 72.30.35.10, A 72.30.35.9 (122)
+
+- CNAME to Client
+  18:31:36.254510 IP 172.31.19.234.domain > 172.31.24.236.53986: 64957 5/0/1 CNAME atsv2-fp-shed.wg1.b.yahoo.com., A 72.30.35.9, A 98.138.219.231, A 98.138.219.232, A 72.30.35.10 (140)
+
+  (TCP with ns3.yahoo.com)
+
+- Request/Response yf2.yahoo.com for AAAA record of atsv2-fp-shed.wg1.b.yahoo.com
+  18:31:36.258639 IP 172.31.19.234.38765 > yf2.yahoo.com.domain: 65247 [1au] AAAA? atsv2-fp-shed.wg1.b.yahoo.com. (70)
+  18:31:36.259494 IP yf2.yahoo.com.domain > 172.31.19.234.38765: 65247*- 4/0/1 AAAA 2001:4998:58:1836::10, AAAA 2001:4998:44:41d::4, AAAA 2001:4998:58:1836::11, AAAA 2001:4998:44:41d::3 (170)
+  
+- Sending CNAME to Client
+  18:31:36.259694 IP 172.31.19.234.domain > 172.31.24.236.51611: 35739 5/0/1 CNAME atsv2-fp-shed.wg1.b.yahoo.com., AAAA 2001:4998:44:41d::3, AAAA 2001:4998:58:1836::10, AAAA 2001:4998:44:41d::4, AAAA 2001:4998:58:1836::11 (188)
+
+  (TCP with m.root-servers.net)
+
+- Request e.gtld-servers.net for A record of yf3.a1.b.yahoo.net
+  18:31:36.722584 IP 172.31.19.234.32985 > e.gtld-servers.net.domain: 17966% [1au] A? yf3.a1.b.yahoo.net. (59)
+
+  (More TCP with m.root-servers.net)
+
+- Request e.gtld-servers.net for A record of yf4.a1.b.yahoo.net
+  18:31:36.729448 IP 172.31.19.234.44430 > e.gtld-servers.net.domain: 32485% [1au] A? yf4.a1.b.yahoo.net. (59)
+
+  (More TCP with m.root-servers.net)
+
+  (TCP with e.gtld-servers.net)
+
+- Request ns4.yahoo.com for A record yf3.a1.b.yahoo.net
+  18:31:36.794814 IP 172.31.19.234.60867 > ns4.yahoo.com.domain: 17747% [1au] A? yf3.a1.b.yahoo.net. (59)
+
+  (More TCP with e.gtld-servers.net)
+
+- Request ns4.yahoo.com for A record yf4.a1.b.yahoo.net
+  18:31:36.798642 IP 172.31.19.234.49692 > ns4.yahoo.com.domain: 49534% [1au] A? yf4.a1.b.yahoo.net. (59)
+
+  (More TCP with e.gtld-servers.net)
+
+- Request/Response to yf2.yahoo.com.domain for A Record for yf4.a1.b.yahoo.net
+  18:31:36.826985 IP 172.31.19.234.46304 > yf2.yahoo.com.domain: 13377% [1au] A? yf4.a1.b.yahoo.net. (59)
+  18:31:36.827660 IP yf2.yahoo.com.domain > 172.31.19.234.46304: 13377*- 1/0/1 A 68.180.130.15 (63)
+
+- Request/Response to yf1.yahoo.com.domain for A Record for yf3.a1.b.yahoo.net
+  18:31:36.828527 IP 172.31.19.234.59527 > yf1.yahoo.com.domain: 38358% [1au] A? yf3.a1.b.yahoo.net. (59)
+  18:31:36.829503 IP yf1.yahoo.com.domain > 172.31.19.234.59527: 38358*- 1/0/1 A 68.180.130.15 (63)
+
+  (TCP with m.root-servers.net)
+
+- Some port scanning service called OvO
+  18:31:38.585027 IP port-scanning-customer.ovo.sc.46462 > 172.31.19.234.8090: Flags [S], seq 4062963593, win 1024, length 0
+  18:31:38.585053 IP 172.31.19.234.8090 > port-scanning-customer.ovo.sc.46462: Flags [R.], seq 0, ack 4062963594, win 0, length 0

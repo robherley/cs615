@@ -27,15 +27,15 @@ Configure the options file with recursion and query for access control:
  
     acl trusted {
         172.31.19.0/24; # anything on vpc subnet
-	    localhost; # our nameserver
+        localhost; # our nameserver
         localnets; # our localnetwork
     };
 
     options {
-		<default options>
-		. . .
+        <default options>
+        . . .
         recursion yes;
-    	allow-query { trusted; };
+        allow-query { trusted; };
     }
 
 Check config and restart bind:
@@ -49,15 +49,16 @@ Client
 Since I am using Ubuntu 18.04, networking is configured with Netplan. So I
 created a file to in /etc/netplan called 99-custom-dns.yaml with the
 following information:
-	network:
-		version: 2
-			ethernets:
-				eth0:
-					nameservers:
-						addresses: [<resolver private ip>]
+    network:
+        version: 2
+        ethernets:
+            eth0:
+                nameservers:
+                    addresses: [<resolver private ip>]
 
-Then we can check the configuration:
-	$ sudo netplan --debug apply
+Then we can check the configuration and apply it:
+    $ sudo netplan try
+    $ sudo netplan apply
 
 One problem I encountered was that the DNS server from DHCP appeared in my 
 config when I ran "sudo systemd-resolve --status". It turns out that the
@@ -78,6 +79,19 @@ the correct DNS:
 Finally, the client was now fully configured with the DNS resolver. Overall,
 it wasn't too difficult to get running but the confusion was mostly due to
 netplan's weird problem with DHCP DNS.
+
+Monitoring tcpdump of DNS and HTTP
+==================================
+
+For both the server and client, I had tcpdump listen (ignoring ssh on 22):
+    $ sudo tcpdump -w <file> 'udp or tcp and not port 22' >&/dev/null &
+
+After running the HTTP 1.1 request, I inspected the tcpdump and immediately
+noticed something peculiar. Both my machines were probed and my resolver was
+probed multiple times during a single dump by different outside machines.
+
+Also, I thought it was funny that one of Facebook's nameservers is called
+friendfeed.
 
 References:
 http://www.tldp.org/HOWTO/DNS-HOWTO-3.html
